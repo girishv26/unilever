@@ -5,7 +5,7 @@ import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import io.gatling.jdbc.Predef._
 
-class scalabilitygatling_1 extends Simulation {
+class unilever extends Simulation {
 
 	val httpProtocol = http
 		.baseURL("http://www.marksandspencer.com")
@@ -29,7 +29,7 @@ class scalabilitygatling_1 extends Simulation {
 	//val ToAddToCart = "true"
 	//val ToViewBag = "true"
 	
-	val scn = scenario("scalabilitygatling_1")
+	val scn = scenario("unilever")
 	.repeat(Iterations){
 		exec(flushHttpCache)
 		.doIf(ToHomePage == "true")
